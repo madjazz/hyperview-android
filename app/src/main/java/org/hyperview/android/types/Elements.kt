@@ -1,4 +1,4 @@
-package ch.smoca.hyperview.types
+package org.hyperview.android.types
 
 sealed class HXMLElement {
     data class HvAlert(val attributes: AlertAttributes) : HXMLElement()

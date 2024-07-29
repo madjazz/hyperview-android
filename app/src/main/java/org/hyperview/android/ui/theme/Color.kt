@@ -1,4 +1,4 @@
-package ch.smoca.hyperview.ui.theme
+package org.hyperview.android.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

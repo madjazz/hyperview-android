@@ -1,10 +1,10 @@
-package ch.smoca.hyperview
+package org.hyperview.android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import ch.smoca.hyperview.ui.theme.HyperviewTheme
+import org.hyperview.android.ui.theme.HyperviewTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

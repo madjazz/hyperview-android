@@ -1,4 +1,4 @@
-package ch.smoca.hyperview
+package org.hyperview.android
 
 import org.junit.Test
 

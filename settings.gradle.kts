@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Hyperview"
+rootProject.name = "hyperview-android"
 include(":app")

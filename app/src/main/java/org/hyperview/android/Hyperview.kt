@@ -1,4 +1,4 @@
-package ch.smoca.hyperview
+package org.hyperview.android
 
 import retrofit2.http.GET
 import retrofit2.Call

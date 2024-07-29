@@ -1,4 +1,4 @@
-package ch.smoca.hyperview
+package org.hyperview.android
 
 import arrow.core.None
 import arrow.core.Some

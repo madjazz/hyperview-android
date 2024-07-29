@@ -1,12 +1,12 @@
-package ch.smoca.hyperview
+package org.hyperview.android
 
 import arrow.core.Either
 import arrow.core.None
 import arrow.core.Some
-import ch.smoca.hyperview.types.HXMLRoot
-import ch.smoca.hyperview.types.HXMLError
-import ch.smoca.hyperview.types.HXMLElement
-import ch.smoca.hyperview.types.ScreenAttributes
+import org.hyperview.android.types.HXMLRoot
+import org.hyperview.android.types.HXMLError
+import org.hyperview.android.types.HXMLElement
+import org.hyperview.android.types.ScreenAttributes
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

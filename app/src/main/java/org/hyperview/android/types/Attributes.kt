@@ -1,4 +1,4 @@
-package ch.smoca.hyperview.types
+package org.hyperview.android.types
 
 import arrow.core.Option
 

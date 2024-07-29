@@ -1,14 +1,6 @@
-package ch.smoca.hyperview
+package org.hyperview.android
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import arrow.core.Some
-import arrow.core.None
 
 @Composable
 fun Hyperview(xml: String) {

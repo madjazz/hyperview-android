@@ -1,4 +1,4 @@
-package ch.smoca.hyperview.types
+package org.hyperview.android.types
 
 enum class HXMLTag(val value: String) {
     ALERT("alert:option"),
