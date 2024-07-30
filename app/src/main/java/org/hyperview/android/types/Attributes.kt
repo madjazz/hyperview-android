@@ -1,5 +1,6 @@
 package org.hyperview.android.types
 
+import arrow.core.None
 import arrow.core.Option
 
 data class AlertAttributes(
@@ -180,27 +181,27 @@ data class TextAttributes(
 )
 
 data class ViewAttributes(
-    val trigger: Option<String>,
-    val href: Option<String>,
-    val verb: Option<String>,
-    val action: Option<String>,
-    val target: Option<String>,
-    val showDuringLoad: Option<String>,
-    val hideDuringLoad: Option<String>,
-    val delay: Option<Int>,
+    val trigger: Option<String> = None,
+    val href: Option<String> = None,
+    val verb: Option<String> = None,
+    val action: Option<String> = None,
+    val target: Option<String> = None,
+    val showDuringLoad: Option<String> = None,
+    val hideDuringLoad: Option<String> = None,
+    val delay: Option<Int> = None,
     val once: Boolean = false,
-    val newValue: Option<String>,
+    val newValue: Option<String> = None,
     val safeArea: Boolean = false,
-    val style: Option<String>,
+    val style: Option<String> = None,
     val scroll: Boolean = false,
     val scrollOrientation: Boolean = false,
     val scrollToInputOffset: Int = 120,
     val showsScrollIndicator: Boolean = true,
-    val id: Option<String>,
+    val id: Option<String> = None,
     val hide: Boolean = false,
     val avoidKeyboard: Boolean = false,
     val sticky: Boolean = false,
-    val keyboardDismissMode: Option<String>
+    val keyboardDismissMode: Option<String> = None
 )
 
 data class WebViewAttributes(

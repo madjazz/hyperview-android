@@ -3,10 +3,12 @@ package org.hyperview.android
 import arrow.core.Either
 import arrow.core.None
 import arrow.core.Some
-import org.hyperview.android.types.HXMLRoot
-import org.hyperview.android.types.HXMLError
 import org.hyperview.android.types.HXMLElement
+import org.hyperview.android.types.HXMLError
+import org.hyperview.android.types.HXMLTag
 import org.hyperview.android.types.ScreenAttributes
+import org.hyperview.android.types.ViewAttributes
+import org.hyperview.android.types.tagError
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -38,7 +40,7 @@ class ParserTest {
     @Test
     fun testParseRootElementDocument() {
         val input = "<doc></doc>"
-        val expected = Either.Right(HXMLRoot.View(children = listOf()))
+        val expected = Either.Right(HXMLElement.HvDoc(children = listOf()))
         val actual = parse(input)
         assertEquals(expected, actual)
     }
@@ -46,7 +48,12 @@ class ParserTest {
     @Test
     fun testParseRootElementFragment() {
         val input = "<view></view>"
-        val expected = Either.Right(HXMLRoot.Fragment(children = listOf()))
+        val expected = Either.Right(
+            HXMLElement.HvView(
+                attributes = ViewAttributes(),
+                children = mutableListOf()
+            )
+        )
         val actual = parse(input)
         assertEquals(expected, actual)
     }
@@ -55,7 +62,7 @@ class ParserTest {
     fun testParseScreenElement() {
         val input = "<doc><screen></screen></doc>"
         val expected = Either.Right(
-            HXMLRoot.View(
+            HXMLElement.HvDoc(
                 children =
                 listOf(
                     HXMLElement.HvScreen(
@@ -73,7 +80,7 @@ class ParserTest {
     fun testParseScreenElementsWithAttribute() {
         val input = "<doc><screen id='Yasamin'></screen></doc>"
         val expected = Either.Right(
-            HXMLRoot.View(
+            HXMLElement.HvDoc(
                 children =
                 listOf(
                     HXMLElement.HvScreen(
@@ -90,7 +97,7 @@ class ParserTest {
     @Test
     fun testParseNestedScreenElement() {
         val input = "<doc><screen><screen></screen></screen></doc>"
-        val expected = Either.Left(HXMLError("<screen> can only be a child of <doc>"))
+        val expected = Either.Left(tagError(HXMLTag.SCREEN, HXMLTag.SCREEN))
         val actual = parse(input)
         assertEquals(expected, actual)
     }

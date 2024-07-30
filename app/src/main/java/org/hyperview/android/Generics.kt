@@ -23,7 +23,10 @@ fun <T : Any> createInstance(c: KClass<T>, kwargs: Map<String, Any?>): T {
             } else {
                 Some(value)
             }
-        } else {
+        } else if (type.contains("Boolean")) {
+            value ?: false
+        }
+        else {
             value
         }
     }

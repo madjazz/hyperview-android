@@ -41,3 +41,6 @@ fun tagError(parent: HXMLTag, tag: String): HXMLError {
     return HXMLError("<${tag}> cannot be a child of <${parent.value}>")
 }
 
+fun tagError(parent: HXMLTag, tag: HXMLTag): HXMLError {
+    return HXMLError("<${tag.value}> cannot be a child of <${parent.value}>")
+}
